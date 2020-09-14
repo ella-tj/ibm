@@ -11,15 +11,15 @@ cd v2ray1
 chmod 777 *
 cd ..
 rm -rf v2ray-linux-64.zip
-mv ~/get-started-python/v2ray1/v2ray ~/get-started-python/v2ray
-mv ~/get-started-python/v2ray1/v2ctl ~/get-started-python/v2ctl
+mv ~/get-started-python/v2ray1/v2ray ~/get-started-python/vray
+mv ~/get-started-python/v2ray1/v2ctl ~/get-started-python/vctl
 rm -rf ~/get-started-python/v2ray1
 uuid=`cat /proc/sys/kernel/random/uuid`
 path=`echo $uuid | cut -f1 -d'-'`
 echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"'$uuid'","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/'$path'"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'>~/get-started-python/config.json
 echo 'applications:'>>manifest.yml
 echo '- path: .'>>manifest.yml
-echo '  command: '/app/htdocs/v2ray'' >>manifest.yml
+echo '  command: '/app/htdocs/vray'' >>manifest.yml
 echo '  name: '$appname''>>manifest.yml
 echo '  random-route: true'>>manifest.yml
 echo '  memory: '$ramsize'M'>>manifest.yml
