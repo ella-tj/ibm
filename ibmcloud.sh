@@ -17,12 +17,6 @@ rm -rf ~/get-started-python/v2ray1
 uuid=`cat /proc/sys/kernel/random/uuid`
 path=`echo $uuid | cut -f1 -d'-'`
 echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"'$uuid'","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/'$path'"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'>~/get-started-python/config.json
-echo 'applications:'>>manifest.yml
-echo '- path: .'>>manifest.yml
-echo '  command: '/app/htdocs/vray'' >>manifest.yml
-echo '  name: '$appname''>>manifest.yml
-echo '  random-route: true'>>manifest.yml
-echo '  memory: '$ramsize'M'>>manifest.yml
 ibmcloud target --cf
 ibmcloud cf push
 domain=`ibmcloud cf app $appname | grep routes | cut -f2 -d':' | sed 's/ //g'`
