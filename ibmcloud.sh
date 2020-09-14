@@ -16,7 +16,7 @@ mv ~/get-started-python/v2ray1/v2ctl ~/get-started-python/vctl
 rm -rf ~/get-started-python/v2ray1
 uuid=`cat /proc/sys/kernel/random/uuid`
 path=`echo $uuid | cut -f1 -d'-'`
-echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"'$uuid'","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/'$path'"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'>~/get-started-python/config.json
+echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"'$uuid'","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/'$path'"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'>~/get-started-python/cconfig.json
 echo UUID: $uuid
 echo path: /$path
 echo vmess://$vmess
