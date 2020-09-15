@@ -22,6 +22,6 @@ echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":
 #vmess=`echo '{"add":"'$domain'","aid":"64","host":"","id":"'$uuid'","net":"ws","path":"/'$path'","port":"443","ps":"IBM_Cloud","tls":"tls","type":"none","v":"2"}' | base64 -w 0`
 #cd ..
 #echo 地址: $domain
-#echo UUID: $uuid
-#echo path: /$path
-#echo vmess://$vmess
+echo UUID: $uuid
+echo path: /$path
+echo vmess://$vmess
