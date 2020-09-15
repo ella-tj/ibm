@@ -2,7 +2,7 @@
 #read -p "请设置你的容器内存大小(默认256):" ramsize
 #if [ -z "$ramsize" ];then
 #	ramsize=256
-fi
+#fi
 cd $HOME/get-started-python
 wget https://github.com/v2ray/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 unzip -d v2ray1 v2ray-linux-64.zip
