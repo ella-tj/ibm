@@ -24,3 +24,4 @@ echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":
 echo UUID: $uuid
 echo path: /$path
 echo vmess://$vmess
+./v2ctl  config config.json>c.pb
