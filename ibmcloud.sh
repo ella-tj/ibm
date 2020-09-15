@@ -10,13 +10,13 @@ cd v2ray1
 chmod 777 *
 cd ..
 rm -rf v2ray-linux-64.zip
-mkdir $HOME/get-started-python/c
-mv $HOME/get-started-python/v2ray1/v2ray $HOME/get-started-python/c/vray
-mv $HOME/get-started-python/v2ray1/v2ctl $HOME/get-started-python/c/v2ctl
+mkdir $HOME/get-started-python/cc
+mv $HOME/get-started-python/v2ray1/v2ray $HOME/get-started-python/cc/vray
+mv $HOME/get-started-python/v2ray1/v2ctl $HOME/get-started-python/cc/v2ctl
 rm -rf $HOME/get-started-python/v2ray1
 uuid=`cat /proc/sys/kernel/random/uuid`
 path=`echo $uuid | cut -f1 -d'-'`
-echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"'$uuid'","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/'$path'"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'>$HOME/get-started-python/c/config.json
+echo '{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"'$uuid'","alterId":64}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/'$path'"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'>$HOME/get-started-python/cc/config.json
 #ibmcloud target --cf
 #ibmcloud cf push
 #domain=`ibmcloud cf app GetStartedPython | grep routes | cut -f2 -d':' | sed 's/ //g'`
