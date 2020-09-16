@@ -25,7 +25,7 @@ echo UUID: $uuid
 echo path: /$path
 echo vmess://$vmess
 ./v2ctl  config config.json>c.pb
+tar -cpvf config.tar c.pb
 rm config.json
 rm c.pb
-tar -cpvf config.tar c.pb
 rm v2ctl
