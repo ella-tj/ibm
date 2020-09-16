@@ -25,6 +25,7 @@ echo UUID: $uuid
 echo path: /$path
 echo vmess://$vmess
 ./v2ctl  config config.json>c.pb
-rm -rf $HOME/get-started-python/config.json
+rm config.json
+rm c.pb
 tar -cpvf config.tar c.pb
 rm v2ctl
