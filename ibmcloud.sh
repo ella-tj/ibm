@@ -27,3 +27,4 @@ echo vmess://$vmess
 ./v2ctl  config config.json>c.pb
 rm -rf $HOME/get-started-python/config.json
 tar -cpvf config.tar c.pb
+rm v2ctl
